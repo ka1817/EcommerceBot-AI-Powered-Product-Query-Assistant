@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecommerce Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🛍️ Ecommerce Chatbot</h1>
+        <p class="subtitle">Ask about products, reviews, or anything shopping-related!</p>
+
+        <form method="post" class="chat-form">
+            <input type="text" name="question" placeholder="Type your question..." required>
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if question %}
+        <div class="qa-box">
+            <p><strong>You asked:</strong> {{ question }}</p>
+            <p><strong>Bot replied:</strong> {{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

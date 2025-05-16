@@ -1,0 +1,10 @@
+langchain
+langchain-groq 
+langchain-community
+langchain-huggingface
+python-dotenv 
+pandas
+faiss-cpu
+fastapi
+uvicorn 
+python-multipart

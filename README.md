@@ -6,6 +6,7 @@
 
 Ecommerce AI Product Insight Assistant is an intelligent chatbot that helps users make smarter shopping choices by extracting insights from customer feedback. It processes Flipkart product data and uses advanced AI technologies like LangChain, Groq's LLaMA model, and FAISS vector search to answer user queries in a helpful, context-aware way.
 The system combines a clean frontend with a powerful FastAPI backend, CI/CD automation via GitHub Actions, and Dockerized deployment — making it easy to scale, maintain, and deploy on platforms like AWS EC2.
+
 ---
 
 ## 🔧 Features

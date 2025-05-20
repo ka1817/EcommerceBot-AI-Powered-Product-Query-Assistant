@@ -1,21 +1,16 @@
-# Byte-compiled / cache files
 __pycache__/
 *.py[cod]
 *.so
 
-# Virtual environment
 venv/
 
 
-# Git
 .git
 .gitignore
 
-# Editor/IDE
 .vscode/
 *.swp
 *.swo
 
-# OS-specific
 .DS_Store
 Thumbs.db

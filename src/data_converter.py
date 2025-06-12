@@ -39,3 +39,7 @@ def dataconveter():
         docs.append(doc)
     
     return docs
+
+if __name__=='__main__':
+    docs=dataconveter()
+    print(f"Sample Document:\n{docs[0].page_content}\n")

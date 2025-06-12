@@ -2,6 +2,7 @@ langchain
 langchain-groq 
 langchain-community
 langchain-huggingface
+sentence-transformers
 python-dotenv 
 pandas
 faiss-cpu

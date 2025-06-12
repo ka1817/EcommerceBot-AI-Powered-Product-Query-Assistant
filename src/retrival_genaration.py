@@ -1,10 +1,12 @@
-from ingest import ingestdata
+from src.ingest import ingestdata
 from langchain.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os 
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
+
+from src.query_rewritting import query_rewriting
 GROQ_API_KEY=os.getenv('GROQ_API_KEY')
 def generation(vstore):
     retriever = vstore.as_retriever(search_kwargs={"k": 3})
@@ -42,6 +44,8 @@ if __name__ == '__main__':
     chain = generation(vstore)
 
     question = "which product has the highest rating"
+    rewritten_query = query_rewriting(question)
+
     response = chain.invoke(question)
 
     print(f"Response: {response}")

@@ -4,8 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from src.retrival_genaration import generation
 from src.ingest import ingestdata
+from src.query_rewritting import query_rewriting
 import uvicorn
-
+import warnings
+warnings.filterwarnings('ignore')
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -23,7 +25,8 @@ async def get_home(request: Request):
 
 @app.post("/", response_class=HTMLResponse)
 async def ask_bot(request: Request, question: str = Form(...)):
-    response = chain.invoke(question)
+    question1=query_rewriting(question)
+    response = chain.invoke(question1)
     return templates.TemplateResponse("index.html", {"request": request, "response": response, "question": question})
 
 if __name__ == "__main__":

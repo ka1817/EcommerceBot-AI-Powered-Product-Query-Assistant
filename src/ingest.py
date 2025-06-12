@@ -1,6 +1,6 @@
-from langchain.embeddings import HuggingFaceEmbeddings
-from data_converter import dataconveter
-from langchain.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from src.data_converter import dataconveter
+from langchain_community.vectorstores import FAISS
 def ingestdata():
     embedding = HuggingFaceEmbeddings()
 
